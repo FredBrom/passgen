@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 	//Verifica se o usuario entrou com a string de controle.
 	if (argc <= 1)
 	{
-		printf("Informe a sequencia para a geração da senha.\n");
+		printf("Control string is missing.\n");
 	}
 	else
 	{

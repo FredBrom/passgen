@@ -1,33 +1,26 @@
-# Passgen 1.0
-Frederico Brom 
-Fevereiro-2023
+<h1> Passgen 1.0</h1>
+<p>Frederico Brom 
+Feb-2023</p>
+<br>
+<p>This program generate random passwords wich contains upper and lower case letters and special characters based on a control string. The control string is a string with special symbols each wich encode a class of character.</p>
+<p>When call the function, pass the control string as argument:</p>
+<br>
+<code>
+	./passgen "aaAAnnee"
+</code>
+<br>
+<p><h2>Options:</h2></p>
 
+*  A - Upper Letter.<br>
 
-Este programa gera senhas aleatorias contendo Letras maiusculas, minusculas
-e caracteres especiais.
-Ao chamar o programa forneça uma string de formatação da senha:
+*  a - Lower Letter.<br>
 
+*  n - A digit between 0 and 9.<br>
 
-'''
-	$./passgen "aaAAnnee"
-'''
+*  e - Special Character { !, @, #, $, %, &, ?, _}
 
+<p>To get more than one password with the same control string, just put the number of iterations bebore the control string:</p>
 
-Em que:
-
-*  A - Letra Maiúscula.
-
-*  a - Letra Minúscula.
-
-*  n - Algarismo entre 0 e 9.
-
-*  e - Algarismo especial { !, @, #, $, %, &, ?, _}.*/
-
-
-Para gerar mais de uma senha com a mesma string de formatação, basta colocar
-o numero de senhas antes da strinf de formatação:
-
-
-'''
-    $./passgen 3 "aaAAnnee"
-'''
+<code>
+    ./passgen 3 "aaAAnnee"
+</code>
