@@ -1,24 +1,23 @@
-/* Este programa gera senhas aleatorias contendo Letras maiusculas, minusculas
- * e caracteres especiais.
- * Ao chamar o programa forneça uma string de fomratação da senha:
+/* This program generates random passwords that contains lower and upper case letters,
+ * digits and special chars.
+ * A control string must be provided at the program call:
  * 		passgen "aaAAnnee"
- * Em que:
- *  A - Letra Maiúscula.
- *  a - Letra Minúscula.
- *  n - Algarismo entre 0 e 9.
- *  e - Algarismo especial { !, @, #, $, %, &, ?, _}.*/
+ * where:
+ *  A - Upper Case.
+ *  a - Lower Case.
+ *  n - Digit between 0 and 9.
+ *  e - Special Character { !, @, #, $, %, &, ?, _}.*/
 
 
 //Lower Alpha (65 - 90)
 //Upper Alpha (97 - 122)
 //Number      (48 - 39)
-//Especial char {'!', '@', '#', '$', '$', '%', '&', '?', '_'}
+//Special char {'!', '@', '#', '$', '$', '%', '&', '?', '_'}
 
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
 
-//Protótipagem das funções.
 char upper_gen();
 char lower_gen();
 char num_gen();
@@ -26,27 +25,25 @@ char spechar_gen();
 
 void generate_password(char *ctr_string);
 
-//Definição do set de caracteres especiais.
+/* Special char set */
 const char spec_set[] = {'!', '@', '#', '$', '%', '&', '?', '_'};
 
 int main(int argc, char *argv[])
 {
-	//Inicializa o gerador.
 	srand(time(NULL));
 	
-	//Verifica se o usuario entrou com a string de controle.
 	if (argc <= 1)
 	{
 		printf("Control string is missing.\n");
 	}
 	else
 	{
-		//Verifica se o usuario entrou com um numero de senhas.
-		if (argc == 2) //Caso seja apenas uma senha.
+        /* Verify if user set the number of passwords */
+		if (argc == 2) 
 		{
 			generate_password(argv[1]);	
 		}
-		else //Caso sejam varias senhas.
+		else
 		{
 			int i;
 			int n;
